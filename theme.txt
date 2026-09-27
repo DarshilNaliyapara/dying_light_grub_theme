@@ -1,0 +1,97 @@
+title-text: ""
+desktop-image: "background.png"
+
+# Keep boot-time terminal output transparent over the artwork.
+# Unifont stays here on purpose: Anton has no proper lowercase and isn't
+# meant for dense console text.
+terminal-box: "terminal_*.png"
+terminal-font: "Unifont Regular 16"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
+# --- Quarantine HUD ---------------------------------------------------------
+
++ label {
+    left = 58%
+    top = 7%
+    width = 37%
+    height = 24
+    text = "NIGHT PROTOCOL  //  VOLATILES ACTIVE"
+    font = "Anton Regular 18"
+    color = "#9b8b80"
+    align = "right"
+}
+
+# --- Main menu --------------------------------------------------------------
+
++ boot_menu {
+    left = 3%
+    top = 35%
+    width = 50%
+    height = 36%
+    item_font = "Anton Regular 28"
+    item_color = "#e7ddd2"
+    selected_item_font = "Anton Regular 28"
+    selected_item_color = "#1a120d"
+    item_height = 56
+    item_spacing = 10
+    item_padding = 14
+    icon_width = 10
+    icon_height = 0
+    item_icon_space = 0
+    selected_item_pixmap_style = "select_*.png"
+    scrollbar = false
+}
+
+# --- Survival telemetry -----------------------------------------------------
+
++ label {
+    left = 5%
+    top = 80%
+    width = 40%
+    height = 18
+    text = "NIGHT IS APPROACHING"
+    font = "Anton Regular 18"
+    color = "#ef5b19"
+    align = "left"
+}
+
++ progress_bar {
+    id = "__timeout__"
+    left = 5%
+    top = 84%
+    width = 40%
+    height = 28
+    font = "Anton Regular 18"
+    color = "#f5ece0"
+    bar_style = "progress_frame_*.png"
+    highlight_style = "progress_hl_*.png"
+    text = "NIGHT COMING IN: %ds"
+}
+
+# --- Controls / warning -----------------------------------------------------
+
++ label {
+    left = 5%
+    top = 92%
+    width = 78%
+    height = 20
+    text = "UP/DOWN: NAVIGATE    ENTER: CONFIRM    E: EDIT ROUTE    C: CONSOLE"
+    font = "Anton Regular 18"
+    color = "#b06a42"
+    align = "left"
+}
+
++ label {
+    left = 72%
+    top = 94%
+    width = 23%
+    height = 20
+    text = "REACH TO NEAREST SAFE HOUSE FAST"
+    font = "Anton Regular 18"
+    color = "#ef5b19"
+    align = "right"
+}
