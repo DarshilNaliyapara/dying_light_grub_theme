@@ -14,23 +14,38 @@ terminal-border: "0"
 
 # --- Quarantine HUD ---------------------------------------------------------
 
+# Sits under the "GOOD NIGHT GOOD LUCK" tagline, flush with the logo edge,
+# so it no longer collides with the DYING LIGHT letters.
 + label {
-    left = 58%
+    left = 4%+9
+    top = 30%
+    width = 30%
+    height = 24
+    text = "HARRAN QUARANTINE ZONE"
+    font = "Anton Regular 18"
+    color = "#ef5b19"
+    align = "left"
+}
+
+# Inside the art's top-right bracket. Darker than v21 (was #9b8b80, 3:1
+# contrast on the bright sky) so it stays readable.
++ label {
+    left = 81%+15
     top = 7%
-    width = 37%
+    width = 256
     height = 24
     text = "NIGHT PROTOCOL  //  VOLATILES ACTIVE"
     font = "Anton Regular 18"
-    color = "#9b8b80"
+    color = "#5c4a3f"
     align = "right"
 }
 
 # --- Main menu --------------------------------------------------------------
 
 + boot_menu {
-    left = 3%
-    top = 35%
-    width = 50%
+    left = 3%+9
+    top = 40%
+    width = 46%
     height = 36%
     item_font = "Anton Regular 28"
     item_color = "#e7ddd2"
@@ -39,7 +54,7 @@ terminal-border: "0"
     item_height = 56
     item_spacing = 10
     item_padding = 14
-    icon_width = 10
+    icon_width = 5
     icon_height = 0
     item_icon_space = 0
     selected_item_pixmap_style = "select_*.png"
@@ -49,35 +64,38 @@ terminal-border: "0"
 # --- Survival telemetry -----------------------------------------------------
 
 + label {
-    left = 5%
-    top = 80%
-    width = 40%
+    left = 4%+9
+    top = 81%
+    width = 46%
     height = 18
-    text = "NIGHT IS APPROACHING"
+    text = "NIGHT APPROACHING"
     font = "Anton Regular 18"
     color = "#ef5b19"
     align = "left"
 }
 
+# NOTE: progress_bar has no `color` property - the countdown text color is
+# `text_color`. v20/v21 used `color`, GRUB ignored it and drew black text.
 + progress_bar {
     id = "__timeout__"
-    left = 5%
+    left = 4%+9
     top = 84%
-    width = 40%
+    width = 46%
     height = 28
     font = "Anton Regular 18"
-    color = "#f5ece0"
+    text_color = "#ffffff"
+    show_text = true
     bar_style = "progress_frame_*.png"
     highlight_style = "progress_hl_*.png"
     text = "NIGHT COMING IN: %ds"
 }
 
-# --- Controls / warning -----------------------------------------------------
+# --- Controls / warning (both share one baseline at 93%) --------------------
 
 + label {
-    left = 5%
-    top = 92%
-    width = 78%
+    left = 4%+9
+    top = 93%
+    width = 60%
     height = 20
     text = "UP/DOWN: NAVIGATE    ENTER: CONFIRM    E: EDIT ROUTE    C: CONSOLE"
     font = "Anton Regular 18"
@@ -85,13 +103,14 @@ terminal-border: "0"
     align = "left"
 }
 
+# Sits on light sand/grey art: v21's orange was ~1:1 contrast (invisible).
 + label {
-    left = 72%
-    top = 94%
-    width = 23%
+    left = 74%+6
+    top = 93%
+    width = 400
     height = 20
     text = "REACH TO NEAREST SAFE HOUSE FAST"
     font = "Anton Regular 18"
-    color = "#ef5b19"
+    color = "#2a1208"
     align = "right"
 }
