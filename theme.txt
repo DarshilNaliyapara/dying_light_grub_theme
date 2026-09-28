@@ -68,7 +68,7 @@ terminal-border: "0"
     top = 81%
     width = 46%
     height = 18
-    text = "NIGHT APPROACHING"
+    text = "NIGHT IS APPROACHING"
     font = "Anton Regular 18"
     color = "#ef5b19"
     align = "left"
