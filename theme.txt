@@ -34,7 +34,7 @@ terminal-border: "0"
     top = 7%
     width = 256
     height = 24
-    text = "NIGHT PROTOCOL  //  VOLATILES ACTIVE"
+    text = "VOLATILES ARE ACTIVE"
     font = "Anton Regular 18"
     color = "#5c4a3f"
     align = "right"
